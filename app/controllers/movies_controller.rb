@@ -34,7 +34,7 @@ class MoviesController < ApplicationController
   end
 
   def destroy
-  	@movie.destroy notice
+  	@movie.destroy 
   	  redirect_to root_path, notice: "It's as if this movie never existed!"
   end
 
