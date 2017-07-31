@@ -1,24 +1,25 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app is a movie review Rails app.  Part of my 14 in 14.  Users are able to log in, log out, and submit movies and reviews.  The gems that were used in creating the app were:
 
-Things you may want to cover:
+Paperclip (for attaching images to the db)
 
-* Ruby version
+Devise (for user authentication)
 
-* System dependencies
+Jquery/Raty (for 5 star rating system)
 
-* Configuration
+All functionality works thus far.  This app will be upgraded at the end of the challenge, for functionality and styling.  Light restyling will also be done tonight/tomorrow morning (July 31st-August 1st).  When this is completed, the preceding sentence will be deleted from this readme.
 
-* Database creation
+Possible upgrades to functionality include, but are not limited to:
 
-* Database initialization
+-Search function (from scratch) for movie titles, directors, and possibly actors.
 
-* How to run the test suite
+-Overall restyling
 
-* Services (job queues, cache servers, search engines, etc.)
+-a scraper that pulls live Movies, as opposed to user created movies
 
-* Deployment instructions
+Thanks for stopping by!
 
-* ...
+-Havick
+
+
