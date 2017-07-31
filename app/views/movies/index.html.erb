@@ -1,5 +1,10 @@
-<h1>Welcome to Under Muview</h1>
-<p>Because life is too short to see a movie that sucks.</p>
+<% if !user_signed_in? %>
+  <div class="jumbotron">
+    <h1>This site is always Under Muview!</h1>
+    <p>Life is too short to waste your time and money on a movie that sucks.  Find out which movies are bad, before you make a bad life decision!</p>
+    <p><%= link_to "Sign Up To Write A Review", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
+  </div>
+<% end %>
 
   <% @movies.each do |movie| %>
     <div class="col-sm-6 col-md-3">
