@@ -1,7 +1,7 @@
 class MoviesController < ApplicationController
 
   before_action :find_movie, except: [:index, :new, :create]
-  
+
   def index
   	@movies = Movie.all.order("created_at DESC") 
   end
@@ -16,7 +16,7 @@ class MoviesController < ApplicationController
   def create
   	@movie = Movie.create(movie_params)
   	if @movie.save
-  	  redirect_to @movie, notice: "Your addition is appreciated!"
+  	  redirect_to movie_path(@movie), notice: "Your addition is appreciated!"
   	else
   	  render 'new'
   	end
@@ -26,7 +26,7 @@ class MoviesController < ApplicationController
   end
 
   def update
-  	if @movie.update
+  	if @movie.update(movie_params)
       redirect_to @movie, notice: "Your update was successful!"
     else
       render 'edit'	
@@ -41,7 +41,7 @@ class MoviesController < ApplicationController
 private
   
   def find_movie
-  	@movie = Movie.find[:id]
+  	@movie = Movie.find(params[:id])
   end
 
   def movie_params
