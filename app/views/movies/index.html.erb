@@ -1,7 +1,10 @@
 <h1>Welcome to Under Muview</h1>
 <p>Because life is too short to see a movie that sucks.</p>
 
-<% @movies.each do |movie| %>
-  <h1><%= link_to movie.title, movie_path(movie) %></h1> <br>
-<% end %>
-
+  <% @movies.each do |movie| %>
+    <div class="col-sm-6 col-md-3">
+      <div class="thumbnail">
+        <%= link_to (image_tag movie.image.url(:medium), class: 'image'), movie %>
+      </div>
+    </div>
+  <% end %>
