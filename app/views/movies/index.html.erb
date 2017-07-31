@@ -2,7 +2,7 @@
 <p>Because life is too short to see a movie that sucks.</p>
 
 <% @movies.each do |movie| %>
-  <%= link_to movie.title, movie_path(movie) %> <br>
+  <h1><%= link_to movie.title, movie_path(movie) %></h1> <br>
 <% end %>
 
 <%= link_to "Add a New Movie", new_movie_path %>
