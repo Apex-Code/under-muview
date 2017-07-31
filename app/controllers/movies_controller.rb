@@ -1,5 +1,7 @@
 class MoviesController < ApplicationController
 
+  before_action :find_movie, except: [:index, :new, :create]
+  
   def index
   	@movies = Movie.all.order("created_at DESC") 
   end
