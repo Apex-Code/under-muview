@@ -35,4 +35,14 @@ class MoviesController < ApplicationController
   	@movie.destroy notice
   	  redirect_to root_path, notice: "It's as if this movie never existed!"
   end
+
+private
+  
+  def find_movie
+  	@movie = Movie.find[:id]
+  end
+
+  def movie_params
+    params.require(:movie).permit(:title, :description, :director, :length, :rating)
+  end
 end
