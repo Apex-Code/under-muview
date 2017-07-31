@@ -1,5 +1,5 @@
-class ReviewController < ApplicationController
-
+class ReviewsController < ApplicationController
+  
   before_action :find_review, only: [:show, :edit, :update, :destroy]
   before_action :find_movie
   before_action :authenticate_user!
@@ -37,7 +37,7 @@ class ReviewController < ApplicationController
       @review = Review.find(params[:id])
     end
 
-    def set_movie
+    def find_movie
       @movie = Movie.find(params[:movie_id])
     end
 

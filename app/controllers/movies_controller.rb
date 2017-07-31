@@ -9,6 +9,7 @@ class MoviesController < ApplicationController
   end
   
   def show
+    @reviews = @movie.reviews.all.order("created_at DESC")
   end
 
   def new
