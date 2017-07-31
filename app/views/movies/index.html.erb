@@ -1,4 +1,9 @@
-<h1>Welcome to Muview!  This is a fancy index page</h1>
+<h1>Welcome to Under Muview</h1>
+<p>Because life is too short to see a movie that sucks.</p>
+
+<% @movies.each do |movie| %>
+  <%= link_to movie.title, movie_path(movie) %> <br>
+<% end %>
 
 <%= link_to "Add a New Movie", new_movie_path %>
 
