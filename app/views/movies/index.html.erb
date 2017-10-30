@@ -1,18 +1,19 @@
 <% if !user_signed_in? %>
-  <div class="jumbotron">
-    <h1>This site is always Under Muview!</h1>
-    <p>Life is too short to waste your time and money on a movie that sucks.  Find out which movies are bad, before you make a bad life decision!</p>
-    <p><%= link_to "Sign Up To Write A Review", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
-  </div>
+    <div class="jumbotron">
+      <h1>This site is always Under Muview!</h1>
+      <p>Life is too short to waste your time and money on a movie that sucks. Find out which movies are bad, before you
+        make a bad life decision!</p>
+      <p><%= link_to "Sign Up To Write A Review", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
+    </div>
 <% end %>
 
-  
+
 <div class="row">
   <% @movies.each do |movie| %>
-    <div class="col-sm-6 col-md-3">
-      <div class="thumbnail">
-        <%= link_to (image_tag movie.image.url(:medium), class: 'image'), movie %>
+      <div class="col-sm-6 col-md-3">
+        <div class="thumbnail">
+          <%= link_to (image_tag movie.image.url(:medium), class: 'image'), movie %>
+        </div>
       </div>
-    </div>
   <% end %>
 </div>
