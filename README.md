@@ -8,7 +8,7 @@ Devise (for user authentication)
 
 Jquery/Raty (for 5 star rating system)
 
-All functionality works thus far.  This app will be upgraded at the end of the challenge, for functionality and styling.  Light restyling will also be done tonight/tomorrow morning (July 31st-August 1st).  When this is completed, the preceding sentence will be deleted from this readme.
+All functionality works thus far.  This app will be upgraded at the end of the challenge, for functionality and styling.  
 
 Possible upgrades to functionality include, but are not limited to:
 
